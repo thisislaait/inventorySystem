@@ -1,0 +1,44 @@
+{% extends "../layout.html" %}
+{% load crispy_forms_tags %} 
+{% load static %}
+{% block content %}
+<div class="content-section">
+    <!-- {{ form.media }} 
+    <form method="POST">
+        <fieldset>
+            <legend class="border-bottom pb-2 mb-4 text-center">Login Form</legend>
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form }}
+            </div>
+            <div class="form-group pt-4">
+                <button class="btn btn-outline-success" type="submit">Login</button>
+            </div>
+      </fieldset>
+    </form> -->
+    <div class="login-container">
+        <div class="image-container">
+            
+        </div>
+        <div class="form-container flex flex-col justify-center align-center">
+            <h1 class="text-7xl mb-16">Login</h1>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-label mb-4 flex flex-col justify-center align-center">
+                    <label for="id_username" class="text-lg">Username</label>
+                    <input type="text" name="username" id="id_username" class="w-full p-2 border rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="id_password" class="text-lg">Password</label>
+                    <input type="password" name="password" id="id_password" class="w-full p-2 border rounded">
+                </div>
+                <div class="btn-container flex items-center justify-between gap-12">
+                    <button type="submit" class=" btn bg-red-500 text-green py-2 px-4 rounded border-green hover:bg-red-600">Login</button>
+                    <a href="#" class="text-gray-500 hover:text-gray-700 mx-4px">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
+{% endblock %}

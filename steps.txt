@@ -1,0 +1,4 @@
+Creating a database in Django
+a) open terminal and type the following script to activate virtual env: source venv/Scripts/activate
+b) change dir into inventory
+c) run migrations : python manage.py migrate
